@@ -16,10 +16,12 @@ const ForgotPassword = (props) => {
         <Fields  placeholder = 'Old Password' secureTextEntry ={true}/>
         <Fields  placeholder = 'New Password' secureTextEntry ={true}/>
         <Fields  placeholder = 'Confirms Password' secureTextEntry ={true}/>
-        <Btn bgColor={darkGreen} txtColor='white' btnLabel={'Login'} 
-        Press={()=>{ alert('Password is changed') 
-        props.navigation.navigate('login') }} />
+        <View style = {styles.btnStyle}>
+            <Btn bgColor={darkGreen} txtColor='white' btnLabel={'Reset Password'} 
+            Press={()=>{ alert('Password is changed') 
+            props.navigation.navigate('login') }} />
         </View>
+    </View>
     </Background>
     
   );
@@ -46,5 +48,8 @@ const styles = StyleSheet.create({
         alignItems:'center',
         
        },
+    btnStyle:{
+        paddingTop:80
+    }   
 });
 export default ForgotPassword;
