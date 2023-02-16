@@ -1,4 +1,4 @@
-import { Alert, StyleSheet, Text, View, TouchableOpacity,keyboardType} from 'react-native'
+import { Alert, StyleSheet, Text, View, TouchableOpacity} from 'react-native'
 import React from 'react'
 import Background from './background';
 import { darkGreen,green } from '../Constants';
@@ -18,7 +18,9 @@ const Login = (props) => {
              keyboardType ={'email-address'}/>
              <Fields  placeholder = 'Password' secureTextEntry={true} />
              <View style = {styles.forgotContainer}>
+                <TouchableOpacity onPress={()=>{props.navigation.navigate('forgotPassword')}}>
                 <Text style ={styles.forgotText}>Forgot Password ?</Text>
+                </TouchableOpacity>
              </View>
              <Btn bgColor={darkGreen} txtColor='white' btnLabel={'Login'} Press={()=>{ alert('logged in')}} />
              <View style = {styles.signupText}>

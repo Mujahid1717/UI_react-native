@@ -1,9 +1,8 @@
-import { StyleSheet, Text, View, keyboardType } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Background from './screens/background';
 import Fields from './screens/Fields';
 import Btn from './screens/Btn';
-import Constants from './Constants'
 import { darkGreen } from './Constants';
 
 
